@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cálculo de Frete e Desconto</title>
+    <link rel="stylesheet" href="../style/atividade_3.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Carrinho de Compras</h2>
+    
+    <div class="form-group">
+        <label for="valorCompra">Subtotal dos Produtos (R$)</label>
+        <input type="number" id="valorCompra" placeholder="Ex: 250.00" step="0.01" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="pesoTotal">Peso Total da Encomenda (kg)</label>
+        <input type="number" id="pesoTotal" placeholder="Ex: 10.5" step="0.1" min="0">
+    </div>
+
+    <button onclick="processarCompra()">Calcular Total</button>
+
+    <div id="erroMsg" class="erro">⚠️ Por favor, insira valores válidos e positivos.</div>
+
+    <div id="cupom-fiscal">
+        <div class="linha-resumo">
+            <span>Subtotal:</span>
+            <span id="res-subtotal">R$ 0,00</span>
+        </div>
+        <div class="linha-resumo">
+            <span>Desconto Progressivo:</span>
+            <span id="res-desconto" style="color: #16a34a;">- R$ 0,00</span>
+        </div>
+        <div class="linha-resumo">
+            <span>Frete:</span>
+            <span id="res-frete">R$ 0,00</span>
+        </div>
+        <div class="total linha-resumo">
+            <span>Total Final:</span>
+            <span id="res-total">R$ 0,00</span>
+        </div>
+    </div>
+</div>
+
+<script src="../script/atividade_3.js">
+</script>
+
+</body>
+</html>
